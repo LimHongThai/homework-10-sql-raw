@@ -63,17 +63,12 @@ Insert new employee record, emp_num = 999, emp_lname = Doe, emp_fname = John, em
 '''
 today = datetime.now()
 
-# sql = "INSERT INTO employee (emp_num, emp_lname, emp_fname, emp_initial, emp_hiredate) VALUES (%s, %s, %s, %s, %s)"
-# value = (999, "Doe", "John", "D", today)
+sql = "INSERT INTO employee (em.emp_num, em.emp_fname, em.emp_lname, em.emp_initial, j.job.description, em.emp_hiredate) FROM employee AS em INNER JOIN job AS j ON em.job.code = j.job.code VALUES (%s, %s, %s, %s, %s, %s);"
+value = (168, "John", "Doe", "JD", "Programmer", today)
 
-# cursor.execute(sql, value)
-
-# DB.commit()
-
+cursor.execute(sql, value)
+DB.commit()
 print(cursor.rowcount, "record inserted.")
-
-
-
 '''
 Update employee record, job_code = 510 where emp_num = 999
 '''
