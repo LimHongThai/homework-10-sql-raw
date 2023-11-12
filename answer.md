@@ -10,6 +10,10 @@ DB.commit()
 
 print(cursor.rowcount, "record inserted.")
 
+
+
+
+
 <!-- 2. -->
 sql = """ SELECT 
     E.EMP_NUM, E.EMP_FNAME, E.EMP_LNAME, E.EMP_INITIAL, J.JOB_DESCRIPTION, J.JOB_CHG_HOUR, E.EMP_HIREDATE
