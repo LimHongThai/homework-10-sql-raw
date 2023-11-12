@@ -1,5 +1,5 @@
 <!-- 1. Couldn't figure out how to add job = 'programmer' -->
-today = datetime.now()
+today = datetime.now() 
 
 sql = "INSERT INTO employee (emp_num, emp_fname, emp_lname, emp_initial, emp_hiredate) VALUES (%s, %s, %s, %s, %s)"
 value = (168, "John", "Doe", "JD", today)
@@ -9,10 +9,6 @@ cursor.execute(sql, value)
 DB.commit()
 
 print(cursor.rowcount, "record inserted.")
-
-
-
-
 
 <!-- 2. -->
 sql = """ SELECT 
